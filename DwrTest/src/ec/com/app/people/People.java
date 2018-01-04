@@ -111,7 +111,6 @@ public class People
     	for (Contacto contacto : listContacto) {
     		 ini++;
 			Person person = new Person(String.valueOf(ini), contacto.getPrimer_nombre(), "centro norte", 20, true, addressoffice);
-			//Thread.sleep(sleepvalue);
 			listPerson.add(person);
 		}
     	//logger.info("persons: "+listPerson.toString());
