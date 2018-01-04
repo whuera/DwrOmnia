@@ -32,6 +32,9 @@ import ec.com.app.model.Address;
 //import com.app.service.impl.ServiceContact;
 import ec.com.app.model.Person;
 
+/**
+ * The Class People.
+ */
 public class People
 {
 	//private static final Logger logger = LoggerFactory.getLogger(People.class);
@@ -55,12 +58,10 @@ public class People
     }
     
     /**
-     * Gets the all persons.
-     *
-     * @param index the index
-     * @return the all persons
-     * @throws InterruptedException 
-     */
+	 * Gets the all persons.
+	 *
+	 * @return the all persons
+	 */
     /*
     public synchronized List<Person> getAllPersons(String index, int sleepvalue) throws InterruptedException{    	
     	List<Contacto> listContacto = new ArrayList<Contacto>();
@@ -86,7 +87,21 @@ public class People
      * @throws InterruptedException 
      */
     ServiceContact serviceContact = new ServiceContact();
+    
+    /** The addressoffice. */
     static Address addressoffice = new Address("amazonas-pereira");
+    
+    /**
+	 * Gets the persons.
+	 *
+	 * @param index
+	 *            the index
+	 * @param sleepvalue
+	 *            the sleepvalue
+	 * @return the persons
+	 * @throws InterruptedException
+	 *             the interrupted exception
+	 */
     public synchronized List<Person> getPersons(String index, int sleepvalue) throws InterruptedException{
     	List<Person> listPerson = new ArrayList<Person>();
     	List<Contacto> listContacto = new ArrayList<Contacto>();
@@ -173,6 +188,11 @@ public class People
      */
     private  Map<String, Person> smallCrowd = new HashMap<String, Person>();
     
+    /**
+	 * Gets the small crowd.
+	 *
+	 * @return the small crowd
+	 */
     public void getsmallCrowd(){
     	List<Contacto> listContacto = new ArrayList<Contacto>();
     	listContacto = serviceContact.getInformationAllPersonsForOptions("100");

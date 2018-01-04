@@ -9,11 +9,18 @@ public class Person {
 	/**
 	 * Instantiates a new person.
 	 *
-	 * @param id the id
-	 * @param name the name
-	 * @param address the address
-	 * @param age the age
-	 * @param superhero the superhero
+	 * @param id
+	 *            the id
+	 * @param name
+	 *            the name
+	 * @param address
+	 *            the address
+	 * @param age
+	 *            the age
+	 * @param superhero
+	 *            the superhero
+	 * @param addressoffice
+	 *            the addressoffice
 	 */
 	public Person(String id, String name, String address, int age, boolean superhero, Address addressoffice) {
 		super();
@@ -130,12 +137,24 @@ public class Person {
 	/** The superhero. */
 	private boolean superhero;
 	
+	/** The addressoffice. */
 	private Address addressoffice;
 	
+	/**
+	 * Gets the addressoffice.
+	 *
+	 * @return the addressoffice
+	 */
 	public Address getAddressoffice() {
 		return addressoffice;
 	}
 
+	/**
+	 * Sets the addressoffice.
+	 *
+	 * @param addressoffice
+	 *            the new addressoffice
+	 */
 	public void setAddressoffice(Address addressoffice) {
 		this.addressoffice = addressoffice;
 	}

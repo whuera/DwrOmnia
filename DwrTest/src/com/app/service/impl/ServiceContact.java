@@ -208,6 +208,9 @@ public class ServiceContact implements IServicePerson {
 		return numident;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.app.service.IServicePerson#getInformationAllPersonsForOptions(java.lang.String)
+	 */
 	@Override
 	public ArrayList<Contacto> getInformationAllPersonsForOptions(String index) {
 		Connection conexion = conn.getConnection();

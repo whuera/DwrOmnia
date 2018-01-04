@@ -16,7 +16,11 @@ import com.app.service.impl.ServiceContact;
  */
 public class conexionOracle {
 	
-	/** The Constant logger. */
+	/**
+	 * The Constant logger.
+	 *
+	 * @return the connection
+	 */
 	//private static final Logger logger = LoggerFactory.getLogger(conexionOracle.class);
 	
 	

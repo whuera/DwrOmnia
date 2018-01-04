@@ -15,6 +15,9 @@ import org.directwebremoting.ui.dwr.Util;
 import ec.com.app.model.Address;
 import ec.com.app.model.Person;
 
+/**
+ * The Class PeopleTable.
+ */
 public class PeopleTable implements Runnable
 {
 	/**
@@ -34,7 +37,13 @@ public class PeopleTable implements Runnable
     {
         updateTableDisplay();
     }
+    
+    /** The addressoffice. */
     static Address addressoffice = new Address("amazonas-pereira");
+    
+    /**
+	 * Update table display.
+	 */
     public void updateTableDisplay()
     {
         // Get the current page.
@@ -88,11 +97,25 @@ public class PeopleTable implements Runnable
      */
     protected class AttributeScriptSessionFilter implements ScriptSessionFilter
     {
+        
+        /**
+		 * Instantiates a new attribute script session filter.
+		 *
+		 * @param attributeName
+		 *            the attribute name
+		 */
         public AttributeScriptSessionFilter(String attributeName)
         {
             this.attributeName = attributeName;
         }
 
+        /**
+		 * Match.
+		 *
+		 * @param session
+		 *            the session
+		 * @return true, if successful
+		 */
         /* (non-Javadoc)
          * @see org.directwebremoting.ScriptSessionFilter#match(org.directwebremoting.ScriptSession)
          */
@@ -103,8 +126,10 @@ public class PeopleTable implements Runnable
             return (check != null && check.equals(Boolean.TRUE));
         }
 
+        /** The attribute name. */
         private final String attributeName;
     }
 
+    /** The Constant SCRIPT_SESSION_ATTR. */
     private final static String SCRIPT_SESSION_ATTR = "SCRIPT_SESSION_ATTR";
 }
